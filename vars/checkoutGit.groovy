@@ -1,7 +1,7 @@
-def call(string gitUrl, string gitBranch) {
+def call() {
     checkout([
         $class: 'GitSCM',
-        branches:[[name:gitBranch]],
-        userRemoteConfigs:[[url: gitUrl]]
+        branches: [[name: 'main']],
+        userRemoteConfigs: [[url: 'https://github.com/Niketanjenekar/Jenkins_shared_library.git']]
     ])
 }
